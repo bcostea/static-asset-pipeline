@@ -1,0 +1,16 @@
+*.iml
+build
+out
+gradlew*
+gradle
+.gradle
+.idea
+
+public
+node_modules
+.sass-cache
+
+src/main/webapp/*
+
+!static/js/app.js
+!static/css/app.css
