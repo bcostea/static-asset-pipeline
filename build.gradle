@@ -9,8 +9,13 @@ buildscript {
   }
 }
 
+plugins {
+  id "com.moowork.grunt" version "0.9"
+}
+
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'com.moowork.grunt'
 
 jar {
   baseName = 'static-asset-pipeline'
@@ -22,6 +27,7 @@ repositories {
     url "http://repo1.maven.org/maven2"
   }
 }
+
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -38,3 +44,9 @@ dependencies {
 task wrapper(type: Wrapper) {
   gradleVersion = '2.3'
 }
+
+
+grunt_build.dependsOn 'installGrunt'
+grunt_build.dependsOn 'npmInstall'
+
+build.dependsOn grunt_release

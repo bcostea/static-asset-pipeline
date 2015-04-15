@@ -26,8 +26,8 @@ module.exports = function(grunt) {
         options:{
           baseUrl: 'assets/javascript',
           mainConfigFile: 'assets/javascript/main.js',
-          out : 'public/js/main.almond.js',
           include: ['app/application'],
+          out : 'public/js/main.almond.js',
           name:'almond',
           optimize:'none',
           almond:true,
@@ -83,6 +83,13 @@ module.exports = function(grunt) {
       css: {
         files: ['assets/sass/*.sass'],
         tasks: ['sass'],
+        options: {
+          spawn: false,
+        }
+      },
+      html: {
+        files: ['assets/html/*.html'],
+        tasks: ['copy'],
         options: {
           spawn: false,
         }

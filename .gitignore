@@ -10,7 +10,5 @@ public
 node_modules
 .sass-cache
 
-src/main/webapp/*
-
-!static/js/app.js
-!static/css/app.css
+public/js/app.js
+public/css/app.css
