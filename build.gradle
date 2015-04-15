@@ -28,7 +28,6 @@ repositories {
   }
 }
 
-
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
@@ -44,7 +43,6 @@ dependencies {
 task wrapper(type: Wrapper) {
   gradleVersion = '2.3'
 }
-
 
 grunt_build.dependsOn 'installGrunt'
 grunt_build.dependsOn 'npmInstall'
